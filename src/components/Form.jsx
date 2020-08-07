@@ -18,7 +18,7 @@ const Form = ({ pid }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await axios({
-      url: `http://spudify-app.herokuapp.com/playlists/${pid}`,
+      url: `https://spudify-app.herokuapp.com/playlists/${pid}`,
       method: "PUT",
       data: input,
     })

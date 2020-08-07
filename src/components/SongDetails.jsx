@@ -14,7 +14,7 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
 
     const response = await axios({
       // url: `http://localhost:3000/playlists/${pid}`,
-      url: `http://spudify-app.herokuapp.com/playlists/${pid}`,
+      url: `https://spudify-app.herokuapp.com/playlists/${pid}`,
       method: "PUT",
       data: {song_id: id}
     });
@@ -28,7 +28,7 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
 
   const toggleFavorite = () => {
     axios({
-      url: `http://spudify-app.herokuapp.com/songs/${id}`,
+      url: `https://spudify-app.herokuapp.com/songs/${id}`,
       method: "PUT",
       data: { isFavorite: isFavorited },
     })

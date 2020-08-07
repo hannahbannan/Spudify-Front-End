@@ -13,7 +13,7 @@ const Playlist = (props) => {
     const makeAPICall = async () => {
       try {
         const response = await axios(
-          `http://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
+          `https://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
         );
         setPlaylist(response.data)
       } catch (err) {
@@ -27,7 +27,7 @@ const Playlist = (props) => {
     const makeAPICall = async () => {
       try {
         const response = await axios(
-          `http://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
+          `https://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
         );
         // console.log("Songs - useEffect - ", response);
         setSongsArr(response.data.songs)

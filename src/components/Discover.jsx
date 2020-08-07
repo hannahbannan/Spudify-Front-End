@@ -8,7 +8,7 @@ const Discover = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await fetch("http://spudify-app.herokuapp.com/playlists");
+        const res = await fetch("https://spudify-app.herokuapp.com/playlists");
         const json = await res.json();
         setList(json);
       } catch (err) {
