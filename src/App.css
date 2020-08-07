@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  background-color: black;
+  height: 100vh;
+  padding-bottom: 40px;
+}
+
+
+
+p {
+  color: white;
+}
+
+h1 {
+  color: #d2b48c;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+h5 {
+  color: #d2b48c;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+}
+
+.nav a {
+  cursor: pointer;
+  font-family: "Courier New";
+  font-weight: bolder;
+  padding: 8px;
+}
+
+.nav a:hover {
+  background-color: #c7ea46;
+  color: black;
+  border-radius: 10px;
+}
+
+.top a {
+  text-decoration: none;
+  color: #c7ea46;
+}
+
+.header {
+  text-decoration: underline #c7ea46;
+  font-size: 3rem;
+}
+
+/* html,
+body {
+  height: 100%;
+} */

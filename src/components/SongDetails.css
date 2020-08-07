@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
+.title {
+  color: #d2b48c;
+  text-align: left;
+}
+
+.artist {
+  text-align: left;
+}
+
+.big-song-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  padding: 10px 40px 10px 40px;
+  width: 50vw;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.song-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.song-container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.length {
+  margin-bottom: 0px;
+}
+
+.heart, .remove {
+  cursor:pointer;
+  font-size: 30px;
+  margin-bottom: 5px;
+  line-height: 30px;
+}
+
+.heart:hover, .remove:hover {
+  color: #c7ea46;
+}
+
+
