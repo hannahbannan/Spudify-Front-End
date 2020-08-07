@@ -13,11 +13,11 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
   const removeSong = async () => {
 
     const response = await axios({
-      url: `http://localhost:3000/playlists/${pid}`,
+      // url: `http://localhost:3000/playlists/${pid}`,
+      url: `http://spudify-app.herokuapp.com/playlists/${pid}`,
       method: "PUT",
       data: {song_id: id}
     });
-    console.log(response.data);
     setIsRemoved(true);
     history.push(`/discover`)
   };
@@ -28,7 +28,7 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
 
   const toggleFavorite = () => {
     axios({
-      url: `http://localhost:3000/songs/${id}`,
+      url: `http://spudify-app.herokuapp.com/songs/${id}`,
       method: "PUT",
       data: { isFavorite: isFavorited },
     })

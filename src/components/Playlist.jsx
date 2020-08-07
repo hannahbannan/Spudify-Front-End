@@ -8,15 +8,13 @@ const Playlist = (props) => {
   const [playlist, setPlaylist] = useState([]);
   const [songsArr, setSongsArr] = useState([])
 
-  console.log(props)
 
   useEffect(() => {
     const makeAPICall = async () => {
       try {
         const response = await axios(
-          `http://localhost:3000/playlists/${props.match.params.id}`
+          `http://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
         );
-        // console.log("Songs - useEffect - ", response);
         setPlaylist(response.data)
       } catch (err) {
         console.error(err);
@@ -29,7 +27,7 @@ const Playlist = (props) => {
     const makeAPICall = async () => {
       try {
         const response = await axios(
-          `http://localhost:3000/playlists/${props.match.params.id}`
+          `http://spudify-app.herokuapp.com/playlists/${props.match.params.id}`
         );
         // console.log("Songs - useEffect - ", response);
         setSongsArr(response.data.songs)

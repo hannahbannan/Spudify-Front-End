@@ -8,7 +8,7 @@ const Favorites = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await fetch("http://localhost:3000/songs");
+        const res = await fetch("http://spudify-app.herokuapp.com/songs");
         const json = await res.json();
         setSongs(json);
       } catch (err) {

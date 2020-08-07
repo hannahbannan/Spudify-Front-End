@@ -7,11 +7,7 @@ import Home from "./components/Home"
 import {Link, Route, Switch, Redirect} from "react-router-dom";
 
 function App() {
-  const [faveList, setFaveList] = useState([]);
-
-  const handleSubmit = (favesong) => {
-    setFaveList([...faveList, favesong]);
-  };
+ 
   return (
    
    <div className="App">

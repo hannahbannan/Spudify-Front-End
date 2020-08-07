@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
 
@@ -6,7 +6,6 @@ const Form = ({ pid }) => {
   const [input, setInput] = useState({ title: "", artist: "", time: "" });
   const [item, setItem] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [songs, setSongs] = useState(null);
 
   const handleChange = (event) => {
     setInput({
@@ -19,7 +18,7 @@ const Form = ({ pid }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await axios({
-      url: `http://localhost:3000/playlists/${pid}`,
+      url: `http://spudify-app.herokuapp.com/playlists/${pid}`,
       method: "PUT",
       data: input,
     })
@@ -30,28 +29,6 @@ const Form = ({ pid }) => {
     setInput({ title: "", artist: "", time: "" });
     setIsSubmitted(true);
   };
-
-  // useEffect(() => {
-  //   const makeAPICall = async () => {
-  //     try {
-  //       const res = await fetch("http://localhost:3000/songs");
-  //       const json = await res.json();
-  //       setSongs(json);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-  //   console.log(songs)
-  //   const createLog = async () => {
-  //     await axios({
-  //         url: `http://localhost:3000/logs`,
-  //         method: "POST",
-  //         data: {  song_id: , playlist_id: pid },
-  //       })
-  //   }
-  //   makeAPICall();
-  //   createLog();
-  // }, []);
 
   return (
     <div className="add-song">
