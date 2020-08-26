@@ -8,8 +8,6 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
   const [isFavorited, setIsFavorited] = useState({ isFavorite });
   let history = useHistory();
 
-
-
   const removeSong = async () => {
 
     const response = await axios({
@@ -19,7 +17,7 @@ const SongDetails = ({ title, artist, length, id, isFavorite, pid }) => {
       data: {song_id: id}
     });
     setIsRemoved(true);
-    history.push(`/discover`)
+    // history.push(`/discover`)
   };
 
   if (isRemoved) {

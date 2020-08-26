@@ -38,6 +38,8 @@ const Playlist = (props) => {
     makeAPICall();
   }, []);
 
+ 
+
   if (playlist) {
     const songs = songsArr.map((el) => (
       <SongDetails
